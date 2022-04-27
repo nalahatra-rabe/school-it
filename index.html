@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSchool</title>
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/fonts/fontawsome/css/all.css" />
+</head>
+
+<body>
+    <div class="Navbar">
+        <div class="control">
+            <button class="Navbar-control"><i class="fa fa-bars"></i></button>
+        </div>
+        <div class="Navbar-Link">
+            <a href="#"><i class="fa fa-home"></i></a>
+            <a href="#" class="active"><i class="fa fa-user-plus"></i></a>
+            <a href="#"><i class="fa fa-user-edit"></i></a>
+            <a href="#"><i class="fa fa-notes-medical"></i></a>
+            <a href="#"><i class="fa fa-clipboard"></i></a>
+            <a href="#"><i class="fa fa-clipboard-check"></i></a>
+        </div>
+    </div>
+    <div class="App">
+        <!-- <div class="App-control">
+            <h4>Année Scolaire: <span>2021 - 2022</span></h4>
+            <div class="control-icon">
+                <button href="#"><i class="fa fa-bell"></i> <span></span></button>
+                <button href=""><i class="fa fa-user-circle"></i></button>
+            </div>
+        </div> -->
+        <h3 id="aboutTask">Inscription d'un étudiant</h3>
+        <div class="info">
+            <div class="info-box">
+                <h5 id="taskName">Information sur l'inscription</h5>
+                <div class="box" id="info-sco">
+                    <!-- annee universitatire -->
+                    <label for="anne_unniv">Année universitaire:</label>
+                    <select name="anne_unniv" id="anne_unniv">
+              <option value="2022">2022</option>
+              <option value="2021 ">2021</option>
+              <option value="2020">2020</option>
+            </select>
+                    <!-- mention -->
+                    <label for="mention">Mention</label>
+                    <select id="mention" name="mention" class="form-control">
+              <option value="DA2I">DA2I</option>
+              <option value="DA2I HYBRID">DA2I HYBRID</option>
+              <option value="RPM">RPM</option>
+              <option value="RPM HYBRID">RPM HYBRID</option>
+              <option value="AES">AES</option>
+              <option value="AES HYBRID">AES HYBRID</option>
+            </select>
+                    <!-- niveau -->
+                    <label for="niveau">Niveau</label>
+                    <select id="niveau" name="niveau" class="form-control">
+              <option value="L1">L1</option>
+              <option value="L2">L2</option>
+              <option value="L3">L3</option>
+              <option value="M1">M1</option>
+              <option value="M2">M2</option>
+            </select>
+                </div>
+                <div class="box_2" id="info-etu">
+                    <label for="matricule">Numéro matriculle:</label>
+                    <input type="text" class="form-control" id="matricule" />
+                    <label for="nom">Nom</label>
+                    <input type="text" class="form-control" id="nom" />
+                    <label for="prenom">Prenom</label>
+                    <input type="text" class="form-control" id="prenom" />
+                    <label for="date_naissance">Date de naissance</label>
+                    <input type="date" class="form-control" id="date_naissance" />
+                </div>
+                <div class="conclusion" id="conclusion"></div>
+            </div>
+
+            <div class="info-container">
+                <div class="progress-container">
+                    <div class="progress" id="progress"></div>
+                    <div class="circle active">1</div>
+                    <div class="circle">2</div>
+                    <div class="circle">3</div>
+                </div>
+                <button class="btn" type="button" desabled id="prev">
+            précendent
+          </button>
+                <button class="btn" type="button" id="next">suivant</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- the javascript link -->
+    <script src="assets/js/sweetalert.min.js"></script>
+    <script src="assets/js/inscription.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+@import 'global.scss';
+.Navbar {
+    width: 80px;
+    height: 100vh;
+    background: #2a9d8f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    float: left;
+    .control {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background: rgba(255, 255, 255, .2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+            color: #fff;
+            font-size: 20px;
+            outline: 0;
+            background: transparent;
+            border: 0;
+        }
+    }
+    .Navbar-Link {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        a {
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            font-size: 17px;
+            text-decoration: none;
+            color: #fff;
+            transition: all .2s ease-in-out;
+            &:hover {
+                background: rgba(255, 255, 255, .2);
+            }
+            &.active {
+                background: rgba(255, 255, 255, .2);
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 5px;
+                    opacity: .5;
+                    height: 100%;
+                    background: #fff;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+.App {
+    float: left;
+    width: calc(100% - 80px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .App-control {
+        width: 100%;
+        height: 80px;
+        border-bottom: 1px solid rgba(0, 0, 0, .08);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        h4 {
+            opacity: .4;
+        }
+        .control-icon {
+            button {
+                padding: 0 20px;
+                font-size: 20px;
+                border: 0;
+                color: rgba(0, 0, 0, .3);
+                background: transparent;
+                position: relative;
+                span {
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 100%;
+                    background: #e76f51;
+                }
+            }
+        }
+    }
+    h3 {
+        text-align: center;
+        margin-top: 30px;
+        opacity: .8;
+    }
+    .info {
+        width: 100%;
+        min-height: 600px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        // Contenu du tableu de l'information //
+        .info-box {
+            width: 40%;
+            height: 500px;
+            background: white;
+            border: 1px dashed #e0e0e0;
+            position: relative;
+            h5 {
+                color: #2a9d8f;
+                opacity: 1;
+                padding: 15px 0 0 15px;
+                transition: all .5s ease;
+            }
+            // information etudiant //
+            .box {
+                position: absolute;
+                width: 100%;
+                min-height: 85%;
+                background: #fff;
+                z-index: 1;
+                margin-top: 30px;
+                display: flex;
+                padding: 0 15px;
+                flex-direction: column;
+                label {
+                    opacity: .5;
+                    padding: 20px 0;
+                    font-family: 'Gilroy-Light';
+                }
+                select {
+                    padding: 10px 5px;
+                    font-size: 16px;
+                    outline: 0;
+                    color: rgba(0, 0, 0, .6);
+                    background: #fff;
+                    border: 1px solid #e0e0e0;
+                    &:focus {
+                        border: 1px solid #2a9d8f;
+                    }
+                }
+            }
+            // info etudiant //
+            .box_2 {
+                position: absolute;
+                background: #fff;
+                width: 100%;
+                min-height: 80%;
+                margin-top: 30px;
+                display: flex;
+                padding: 0 15px;
+                flex-direction: column;
+                label {
+                    opacity: .5;
+                    padding: 20px 0;
+                    font-family: 'Gilroy-Light';
+                }
+                input {
+                    padding: 10px 15px;
+                    font-size: 16px;
+                    outline: 0;
+                    color: rgba(0, 0, 0, .6);
+                    background: #fff;
+                    border: 1px solid #e0e0e0;
+                    transition: all .5s ease-in-out;
+                    &::placeholder {
+                        opacity: .8;
+                        font-family: 'Gilroy-Light';
+                        font-size: 12px;
+                    }
+                    &:focus {
+                        border: 1px solid #2a9d8f;
+                    }
+                }
+            }
+            // conclustion //
+            .conclusion {
+                position: absolute;
+                background: red;
+                width: 100%;
+                min-height: 80%;
+                margin-top: 30px;
+                display: flex;
+                padding: 0 15px;
+                flex-direction: column;
+                z-index: 0;
+            }
+        }
+        // Barre de progresssion //
+        .info-container {
+            text-align: center;
+            .progress-container {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                margin-bottom: 30px;
+                margin-top: 40px;
+                width: 600px;
+                // border: 1px solid red;
+                &::before {
+                    content: "";
+                    background: #e0e0e0;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    height: 4px;
+                    width: 100%;
+                    z-index: -1;
+                }
+                .progress {
+                    background: #2a9d8f;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    height: 4px;
+                    width: 0%;
+                    z-index: -1;
+                    transition: all .8s ease-in-out;
+                }
+                .circle {
+                    background-color: #fff;
+                    color: #999;
+                    border-radius: 50%;
+                    height: 30px;
+                    width: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 3px solid #e0e0e0;
+                    transition: .4s ease;
+                    &.active {
+                        border-color: #2a9d8f;
+                    }
+                }
+            }
+            .btn {
+                color: #fff;
+                background: #2a9d8f;
+                border: 0;
+                border-radius: 6px;
+                cursor: pointer;
+                padding: 8px 30px;
+                font-size: 14px;
+                margin: 10px 40px 40px 40px;
+                width: 150px;
+                outline: 0;
+                transition: all .3s ease-in-out;
+                &:nth-child(3) {
+                    background: transparent;
+                    border: 1px solid #2a9d8f;
+                    color: #2a9d8f;
+                }
+                &:hover {
+                    background: #2a9d8f;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .Navbar {
+        display: none;
+    }
+    .App {
+        width: 100%;
+        .info {
+            .info-box {
+                width: 90%;
+            }
+            .info-container {
+                .progress-container {
+                    width: 200px;
+                    margin-left: calc(50% - 100px);
+                }
+                button {
+                    margin: 10px 20px 20px 20px;
+                }
+            }
+        }
+    }
+}
